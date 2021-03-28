@@ -22,6 +22,7 @@ a{
 img {
   display: block;
   max-width: 100%;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -97,7 +98,133 @@ img {
 
 /* Content */
 .content {
+  display: grid;
   grid-area: content;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 900px;
+}
+
+.wide-column {
+  grid-column: 1 / -1;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+/* Characteristics Cards */
+.characteristics {
+  display: flex;
+  align-items: flex-start;
+}
+
+.characteristics > div {
+  position: relative;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44, 0.15);
+}
+
+.characteristics > div:first-child {
+  margin-right: 30px;
+}
+
+.characteristics span {
+  display: block;
+  color: #b07dfb;
+}
+
+.number {
+  color: #b07dfb;
+  font-size: 3em;
+  line-height: 1;
+  margin: 10px auto;
+}
+
+.label {
+  position: relative;
+  top: 2px;
+  border-spacing: 2px;
+  border-radius: 0 0 5px 5px;
+  padding: 5px 0;
+  background: #fff;
+}
+
+/* Content Styles */
+.title {
+  color: #b07dfb;
+}
+
+.title h1 {
+  font-size: 3.75em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.title span {
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  color: rgba(0, 0, 0, .7);
+}
+
+.emphasis {
+  font-size: 0.875em;
+  color: #b07dfb;
+  max-width: 16em;
+}
+
+.quote, .attributes {
+  align-self: start;
+  padding: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44, 0.15);
+}
+
+.quote p {
+  font-size: 1.5em;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.quote cite {
+  display: block;
+  text-align: end;
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.attributes li {
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.125em;
+  padding: 15px;
+}
+
+.attributes li + li {
+  border-top: 2px solid #b07dfb;
+}
+
+.informations p + p {
+  margin-top: 30px;
 }
 
 /* AdSense / Adverts */
